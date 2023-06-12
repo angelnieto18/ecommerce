@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './assets/css/App.css';
 
 const getProducts = async (url) => {
   const response = await fetch(url);
@@ -22,14 +22,6 @@ const images = {
 
 const App = () => {
   const [productsList, setProductsList] = useState({});
-
-  const handle = () => {
-    const { products } = productsList;
-
-    const mapProducts = products.map((product) => {
-      console.log(product);
-    });
-  };
 
   useEffect(() => {
     getProducts('https://dummyjson.com/products?limit=10').then((products) => {
