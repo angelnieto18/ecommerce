@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Card from './components/Card/Card';
 import './assets/css/App.css';
 
-const getProducts = async (url) => {
+export const getProducts = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
   return data;
@@ -39,14 +40,12 @@ const App = () => {
           <p>Loading...</p>
         ) : (
           productsList.products.map((product) => (
-            <div key={product.id} className='product'>
-              <div className='product__image-container'>
-                <img className='product__image' src={images[product.id - 1]} />
-              </div>
-              <div className='product__title-container'>
-                <h2 className='product_title'>{product.title}</h2>
-              </div>
-            </div>
+            <Card
+              key={product.id}
+              id={product.id}
+              image={images[product.id - 1]}
+              title={product.title}
+            />
           ))
         )}
       </div>
