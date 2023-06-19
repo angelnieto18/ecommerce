@@ -1,7 +1,10 @@
-.card__image {
-    width: 100%;
+.card {
+    background: #eee;
+    color: #111;
+    padding: 1rem;
+    text-decoration: none;
 }
 
-.card__title-container {
-    text-align: center;
+.card__image {
+    width: 100%;
 }
