@@ -8,3 +8,14 @@
 .card__image {
     width: 100%;
 }
+
+.card__price-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__discount {
+    text-decoration: line-through;
+    color: #999;
+}
