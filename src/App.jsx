@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from './layouts/Header/Header';
 import Card from './components/Card/Card';
 import './assets/css/App.css';
 
@@ -32,9 +33,7 @@ const App = () => {
 
 	return (
 		<>
-			<div>
-				<h1>All products</h1>
-			</div>
+			<Header />
 			<section className='products'>
 				{productsList === undefined ? (
 					<p>Loading...</p>
