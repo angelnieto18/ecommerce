@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import logo from '../../assets/img/logo.svg';
-import bars from '../../assets/img/bars-solid.svg';
-import '../../assets/css/Header/Header.css';
+import logo from '../../assets/images/logo.svg';
+import bars from '../../assets/images/bars-solid.svg';
+import '../../assets/styles/Header/Header.css';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ title }) => {
 	return (
 		<header className='header'>
 			<Nav />
 			<div className='header__title-container'>
-				<h1>All products</h1>
+				<h1>{title}</h1>
 			</div>
 		</header>
 	);
@@ -34,7 +34,7 @@ const Nav = () => {
 			</div>
 			<ul className={`navbar__list ${toggle}`}>
 				<li>
-					<Link className='navbar__link' to={'./'}>
+					<Link className='navbar__link' to={'/'}>
 						Home
 					</Link>
 				</li>
