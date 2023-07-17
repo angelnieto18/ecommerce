@@ -18,18 +18,18 @@ const Product = () => {
 
 	return (
 		<>
-			<Header title={'Single product'} />
-			<div className='product'>
-				<div className='product__image-container'>
-					<img className='product__image' src={images[productId]} />
+			<Header title={singleProduct.title} />
+			<main className='product-container'>
+				<div className='product'>
+					<div className='product__image-container'>
+						<img className='product__image' src={images[productId]} />
+					</div>
+					<div className='product__price-container'>
+						<h2 className='product__price'>${singleProduct.price}</h2>
+					</div>
 				</div>
-				<div className='product__price-container'>
-					<h2 className='product__price'>${singleProduct.price}</h2>
-				</div>
-				<div className='product__title-container'>
-					<h3 className='product__title'>{singleProduct.title}</h3>
-				</div>
-			</div>
+			</main>
+			<br />
 		</>
 	);
 };
