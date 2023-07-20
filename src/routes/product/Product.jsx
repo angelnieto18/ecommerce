@@ -18,18 +18,36 @@ const Product = () => {
 
 	return (
 		<>
-			<Header title={singleProduct.title} />
+			<Header location={'single-product'} />
 			<main className='product-container'>
 				<div className='product'>
 					<div className='product__image-container'>
-						<img className='product__image' src={images[productId]} />
+						<img className='product__image' src={images[productId - 1]} />
+					</div>
+					<div className='product__title-container'>
+						<h2 className='product__title'>{singleProduct.title}</h2>
 					</div>
 					<div className='product__price-container'>
-						<h2 className='product__price'>${singleProduct.price}</h2>
+						<h3 className='product__price-discount'>
+							$
+							{(singleProduct.price - (singleProduct.price * singleProduct.discountPercentage) / 100).toFixed(
+								0
+							)}
+							<sup>
+								.
+								{((singleProduct.price - (singleProduct.price * singleProduct.discountPercentage) / 100) % 1)
+									.toFixed(2)
+									.substring(2)}
+							</sup>
+						</h3>
+						<h3 className='product__price'>${singleProduct.price}</h3>
+					</div>
+					<div className='product__buttons-container'>
+						<button className='product__buy-botton'>Buy</button>
+						<button className='product__cart-botton'>Add to cart</button>
 					</div>
 				</div>
 			</main>
-			<br />
 		</>
 	);
 };
