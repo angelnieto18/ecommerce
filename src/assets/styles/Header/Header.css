@@ -1,10 +1,7 @@
-.header {
-	height: 50vh;
-}
-
 .navbar {
 	background: #ddd;
-	height: 20%;
+	height: 5rem;
+	position: relative;
 }
 
 .navbar__assets-container {
@@ -27,7 +24,6 @@
 	padding: 1rem;
 	position: absolute;
 	text-align: center;
-	top: 89px;
 	transition: all 0.25s;
 	width: 100%;
 }
@@ -52,6 +48,10 @@
 .header__title-container {
 	align-items: center;
 	display: flex;
-	height: 80%;
+	height: 15rem;
 	justify-content: center;
+}
+
+.single-product {
+	height: 100%;
 }

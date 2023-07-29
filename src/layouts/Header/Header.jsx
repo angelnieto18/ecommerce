@@ -4,11 +4,11 @@ import bars from '../../assets/images/bars-solid.svg';
 import '../../assets/styles/Header/Header.css';
 import { Link } from 'react-router-dom';
 
-const Header = ({ title }) => {
+const Header = ({ title, location }) => {
 	return (
 		<header className='header'>
 			<Nav />
-			<div className='header__title-container'>
+			<div className={`header__title-container ${location}`}>
 				<h1>{title}</h1>
 			</div>
 		</header>

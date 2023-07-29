@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './routes/home/Home';
 import App from './App';
-import Error from './error.jsx';
+import Error from './Error.jsx';
 import Product from './routes/product/Product.jsx';
 
 const images = {
