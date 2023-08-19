@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import logo from '../../assets/images/logo.svg';
 import bars from '../../assets/images/bars-solid.svg';
-import '../../assets/styles/Header/Header.css';
 import { Link } from 'react-router-dom';
+import '../../assets/styles/Header/Header.css';
 
 const Header = ({ title, location }) => {
 	return (
@@ -27,7 +27,7 @@ const Nav = () => {
 	};
 
 	return (
-		<nav className='navbar'>
+		<nav className='navbar bg-slate-500'>
 			<div className='navbar__assets-container'>
 				<img className='navbar__image' src={logo} alt='Logo' />
 				<img className='navbar__icon' src={bars} alt='toggle' onClick={toggleHandler} />

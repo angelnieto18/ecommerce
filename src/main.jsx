@@ -6,9 +6,10 @@ import Home from './routes/home/Home';
 import App from './App';
 import Error from './Error.jsx';
 import Product from './routes/product/Product.jsx';
+import './index.css';
 
 const images = {
-	0: 'https://usedmobiles4u.co.uk/wp-content/uploads/2021/10/iphone-8-gold-2-1-1-2-500x500.png',
+	0: 'https://wedeliverphones.com/wp-content/uploads/2022/05/iPhone-8-64GB-We-Deliver-Phones.png',
 	1: 'https://cdn.shopify.com/s/files/1/0325/8708/8005/products/iphone-x_700x_700x_65ddf5c5-512f-4026-af21-5e6fd5d1ec35.png?v=1671052373',
 	2: 'https://ciclozero.com.mx/wp-content/uploads/2020/10/samsungs9-negro.png',
 	3: 'https://assetscdn1.paytm.com/images/catalog/product/M/MO/MOBVOUCHER-FOR-MAYA695029CF0BD15D/1629219756232_0.png',

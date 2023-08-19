@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	font-family: 'Inter';
+}
+
+.products {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0 1rem;
+}
