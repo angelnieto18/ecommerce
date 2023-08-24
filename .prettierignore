@@ -1,1 +1,9 @@
+node_modules
+public
 
+
+# ignore all files in this directory
+/*.html
+/*.js
+/*.json
+/*.cjs
