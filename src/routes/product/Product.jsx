@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import "../../assets/styles/Product/Product.css"
 import Header from "../../layouts/Header/Header"
 import { ecommerceContext } from "../../contexts/EcommerceContext"
 
@@ -18,17 +17,17 @@ const Product = () => {
 
   return (
     <>
-      <Header location={"single-product"} />
-      <main className="product-container">
-        <div className="product">
-          <div className="product__image-container">
-            <img className="product__image" src={images[productId - 1]} />
+      <Header className="bg-red-900" location={"h-0"}/>
+      <main className="flex justify-center">
+        <div className="w-[90%] mt-4 mb-0 mx-0 p-4 rounded-2xl bg-gray-200">
+          <div className="w-full">
+            <img className="w-full" src={images[productId - 1]} />
           </div>
-          <div className="product__title-container">
-            <h2 className="product__title">{singleProduct.title}</h2>
+          <div>
+            <h2>{singleProduct.title}</h2>
           </div>
-          <div className="product__price-container">
-            <h3 className="product__price-discount">
+          <div className="flex items-center justify-between">
+            <h3>
               $
               {(
                 singleProduct.price -
@@ -46,11 +45,11 @@ const Product = () => {
                   .substring(2)}
               </sup>
             </h3>
-            <h3 className="product__price">${singleProduct.price}</h3>
+            <h3 className="text-[#999] line-through">${singleProduct.price}</h3>
           </div>
-          <div className="product__buttons-container">
-            <button className="product__buy-botton">Buy</button>
-            <button className="product__cart-botton">Add to cart</button>
+          <div className="flex flex-col gap-4 mt-4 mb-0 mx-0">
+            <button className="text-[#eee] p-2 rounded-2xl border-[none] bg-slate-950">Buy</button>
+            <button className="text-[#eee] p-2 rounded-2xl border-[none] bg-slate-950">Add to cart</button>
           </div>
         </div>
       </main>

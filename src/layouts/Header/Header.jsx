@@ -2,13 +2,12 @@ import React, { useState } from "react"
 import logo from "../../assets/images/logo.svg"
 import bars from "../../assets/images/bars-solid.svg"
 import { Link } from "react-router-dom"
-import "../../assets/styles/Header/Header.css"
 
 const Header = ({ title, location }) => {
   return (
-    <header className="header">
+    <header className="relative">
       <Nav />
-      <div className={`header__title-container ${location}`}>
+      <div className={`flex items-center justify-center ${location}`}>
         <h1>{title}</h1>
       </div>
     </header>
@@ -27,19 +26,19 @@ const Nav = () => {
   }
 
   return (
-    <nav className="navbar bg-slate-500">
-      <div className="navbar__assets-container">
-        <img className="navbar__image" src={logo} alt="Logo" />
+    <nav className="h-20 relative bg-gray-100">
+      <div className="flex items-center h-full justify-between px-4 py-0">
+        <img className="cursor-pointer w-8" src={logo} alt="Logo" />
         <img
-          className="navbar__icon"
+          className="cursor-pointer w-8"
           src={bars}
           alt="toggle"
           onClick={toggleHandler}
         />
       </div>
-      <ul className={`navbar__list ${toggle}`}>
+      <ul className={`absolute list-none text-center transition-all duration-[1s] w-full p-4 bg-gray-100 ${toggle}`}>
         <li>
-          <Link className="navbar__link" to={"/"}>
+          <Link className="text-[#111] inline-block no-underline p-4 rounded-lg bg-neutral-50" to={"/"}>
             Home
           </Link>
         </li>

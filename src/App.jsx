@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom"
 const App = () => {
   return (
     <>
-      <Header title={"All products"} />
+      <Header title={"All products"} location={"h-60"} />
       <section className="products">
         <Outlet />
       </section>
