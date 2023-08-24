@@ -12,8 +12,8 @@ const Product = () => {
 
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${productId}`)
-      .then((response) => response.json())
-      .then((product) => setSingleProduct(product))
+      .then(response => response.json())
+      .then(product => setSingleProduct(product))
   }, [])
 
   return (

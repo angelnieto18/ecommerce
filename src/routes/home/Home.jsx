@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react"
 import Card from "../../components/Card/Card"
 import { ecommerceContext } from "../../contexts/EcommerceContext"
 
-export const getProducts = async (url) => {
+export const getProducts = async url => {
   const response = await fetch(url)
   const data = await response.json()
   return data
@@ -14,7 +14,7 @@ const Home = () => {
   const images = useContext(ecommerceContext)
 
   useEffect(() => {
-    getProducts("https://dummyjson.com/products?limit=10").then((products) => {
+    getProducts("https://dummyjson.com/products?limit=10").then(products => {
       setProductsList(products.products)
     })
   }, [])
@@ -24,7 +24,7 @@ const Home = () => {
       {productsList === undefined ? (
         <p>Loading...</p>
       ) : (
-        productsList.map((product) => (
+        productsList.map(product => (
           <Card
             key={product.id}
             id={product.id}
