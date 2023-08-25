@@ -5,23 +5,23 @@ const Card = ({ id, image, price, discount, discountDecimals, title }) => {
   return (
     <>
       <Link
-        className="card bg-slate-100 text-slate-950 p-4 rounded-2xl text-xs w-full no-underline"
+        className="w-full rounded-2xl bg-slate-100 p-4 text-xs text-slate-950 no-underline"
         to={`product/${id}`}
       >
-        <div className="card__image-container">
+        <div>
           <img className="w-full" src={image} />
         </div>
-        <div className="flex justify-between items-center">
-          <h2 className="card__price">
+        <div className="flex items-center justify-between">
+          <h2>
             ${discount}
             <sup>.{discountDecimals}</sup>
           </h2>
-          <div className="card__discount-container">
+          <div>
             <p className="text-slate-400 line-through">${price}</p>
           </div>
         </div>
-        <div className="card__title-container">
-          <h4 className="card__title">{title}</h4>
+        <div>
+          <h4>{title}</h4>
         </div>
       </Link>
     </>

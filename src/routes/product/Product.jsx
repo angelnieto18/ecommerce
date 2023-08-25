@@ -17,9 +17,9 @@ const Product = () => {
 
   return (
     <>
-      <Header className="bg-red-900" location={"h-0"}/>
+      <Header className="bg-red-900" location={"h-0"} />
       <main className="flex justify-center">
-        <div className="w-[90%] mt-4 mb-0 mx-0 p-4 rounded-2xl bg-gray-200">
+        <div className="mx-0 mb-0 mt-4 w-[90%] rounded-2xl bg-gray-200 p-4">
           <div className="w-full">
             <img className="w-full" src={images[productId - 1]} />
           </div>
@@ -47,9 +47,13 @@ const Product = () => {
             </h3>
             <h3 className="text-[#999] line-through">${singleProduct.price}</h3>
           </div>
-          <div className="flex flex-col gap-4 mt-4 mb-0 mx-0">
-            <button className="text-[#eee] p-2 rounded-2xl border-[none] bg-slate-950">Buy</button>
-            <button className="text-[#eee] p-2 rounded-2xl border-[none] bg-slate-950">Add to cart</button>
+          <div className="mx-0 mb-0 mt-4 flex flex-col gap-4">
+            <button className="rounded-2xl border-[none] bg-slate-950 p-2 text-[#eee]">
+              Buy
+            </button>
+            <button className="rounded-2xl border-[none] bg-slate-950 p-2 text-[#eee]">
+              Add to cart
+            </button>
           </div>
         </div>
       </main>
