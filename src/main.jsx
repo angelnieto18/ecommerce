@@ -6,6 +6,7 @@ import Home from "./routes/home/Home"
 import App from "./App"
 import Error from "./Error.jsx"
 import Product from "./routes/product/Product.jsx"
+import SignUp from "./routes/sign-up/signUp.jsx"
 import "./index.css"
 
 const images = {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     path: "product/:productId",
     element: <Product />,
   },
+  {
+    path: "sign-up",
+    element: <SignUp />
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(

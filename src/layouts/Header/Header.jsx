@@ -50,7 +50,7 @@ const Nav = () => {
         <li>
           <Link
             className="inline-block rounded-lg bg-neutral-50 p-4 mb-2 text-[#111] no-underline"
-            to={"/sign"}
+            to={"/sign-up"}
           >
             Sign up
           </Link>
