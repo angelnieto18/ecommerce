@@ -6,7 +6,7 @@ import Home from "./routes/home/Home"
 import App from "./App"
 import Error from "./Error.jsx"
 import Product from "./routes/product/Product.jsx"
-import SignUp from "./routes/sign-up/signUp.jsx"
+import SignUp from "./routes/sign-up/SignUp.jsx"
 import "./index.css"
 
 const images = {
